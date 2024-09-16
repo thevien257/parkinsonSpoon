@@ -1,0 +1,4 @@
+../drivers/src/stm32f411ceu6_GPIO.c:10:6:GPIO_ClockControl	7
+../drivers/src/stm32f411ceu6_GPIO.c:28:6:initGPIO	2
+../drivers/src/stm32f411ceu6_GPIO.c:50:9:GPIO_read	1
+../drivers/src/stm32f411ceu6_GPIO.c:55:6:GPIO_write	1
