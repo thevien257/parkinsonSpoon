@@ -51,6 +51,14 @@ MEMORY
 /* Sections */
 SECTIONS
 {
+
+.sram_data :
+{
+  . = ALIGN(4);
+  *(.sram_data)
+  . = ALIGN(4);
+} >RAM AT>FLASH
+
   /* The startup code into "RAM" Ram type memory */
   .isr_vector :
   {

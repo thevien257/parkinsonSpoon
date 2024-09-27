@@ -1,4 +1,4 @@
-"./Example/main.o"
+"./Example/100mhz.o"
 "./Example/syscalls.o"
 "./Example/sysmem.o"
 "./Startup/startup_stm32f411ceux.o"

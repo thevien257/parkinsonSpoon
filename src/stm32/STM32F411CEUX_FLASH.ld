@@ -48,9 +48,22 @@ MEMORY
   FLASH    (rx)    : ORIGIN = 0x8000000,   LENGTH = 512K
 }
 
+
+
 /* Sections */
 SECTIONS
 {
+
+
+.sram_code :
+{
+  . = ALIGN(4);
+  *(.sram_code)
+  . = ALIGN(4);
+} >RAM AT>FLASH
+
+
+
   /* The startup code into "FLASH" Rom type memory */
   .isr_vector :
   {

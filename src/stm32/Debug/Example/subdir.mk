@@ -5,17 +5,17 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Example/main.c \
+../Example/100mhz.c \
 ../Example/syscalls.c \
 ../Example/sysmem.c 
 
 OBJS += \
-./Example/main.o \
+./Example/100mhz.o \
 ./Example/syscalls.o \
 ./Example/sysmem.o 
 
 C_DEPS += \
-./Example/main.d \
+./Example/100mhz.d \
 ./Example/syscalls.d \
 ./Example/sysmem.d 
 
@@ -27,7 +27,7 @@ Example/%.o Example/%.su Example/%.cyclo: ../Example/%.c Example/subdir.mk
 clean: clean-Example
 
 clean-Example:
-	-$(RM) ./Example/main.cyclo ./Example/main.d ./Example/main.o ./Example/main.su ./Example/syscalls.cyclo ./Example/syscalls.d ./Example/syscalls.o ./Example/syscalls.su ./Example/sysmem.cyclo ./Example/sysmem.d ./Example/sysmem.o ./Example/sysmem.su
+	-$(RM) ./Example/100mhz.cyclo ./Example/100mhz.d ./Example/100mhz.o ./Example/100mhz.su ./Example/syscalls.cyclo ./Example/syscalls.d ./Example/syscalls.o ./Example/syscalls.su ./Example/sysmem.cyclo ./Example/sysmem.d ./Example/sysmem.o ./Example/sysmem.su
 
 .PHONY: clean-Example
 
