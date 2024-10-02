@@ -1,4 +1,5 @@
 #include <MPU_6050.h>
+
 #include <SimpleKalmanFilter.h>
 #include <Servo.h>
 
@@ -101,16 +102,16 @@ void loop() {
   // ypr[0] = z.updateEstimate(ypr[0]);
   // ypr[1] = x.updateEstimate(ypr[1]);
   //ypr[2] = y.updateEstimate(ypr[2]);
-  PID(0);
-  PID(1);
-  PID(2);
+  // PID(0);
+  // PID(1);
+  // PID(2);
  
     // m[1].write(map(ypr[1], -90, 90, 0, 180));
     // m[2].write(map(-ypr[2], -90, 90, 0, 180));
-  // Serial.print(ypr[0]);
-  // Serial.print("\t");
-  // Serial.print(-ypr[1]);
-  // Serial.print("\t");
-  // Serial.print(-ypr[2]);
-  // Serial.println("\n\n");
+  Serial.print(ypr[0]);
+  Serial.print("\t");
+  Serial.print(-ypr[1]);
+  Serial.print("\t");
+  Serial.print(-ypr[2]);
+  Serial.println("\n\n");
 }

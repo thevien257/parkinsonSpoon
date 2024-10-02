@@ -6,14 +6,17 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../drivers/src/stm32f411ceu6_GPIO.c \
+../drivers/src/stm32f411ceu6_I2C.c \
 ../drivers/src/stm32f411ceu6_generic.c 
 
 OBJS += \
 ./drivers/src/stm32f411ceu6_GPIO.o \
+./drivers/src/stm32f411ceu6_I2C.o \
 ./drivers/src/stm32f411ceu6_generic.o 
 
 C_DEPS += \
 ./drivers/src/stm32f411ceu6_GPIO.d \
+./drivers/src/stm32f411ceu6_I2C.d \
 ./drivers/src/stm32f411ceu6_generic.d 
 
 
@@ -24,7 +27,7 @@ drivers/src/%.o drivers/src/%.su drivers/src/%.cyclo: ../drivers/src/%.c drivers
 clean: clean-drivers-2f-src
 
 clean-drivers-2f-src:
-	-$(RM) ./drivers/src/stm32f411ceu6_GPIO.cyclo ./drivers/src/stm32f411ceu6_GPIO.d ./drivers/src/stm32f411ceu6_GPIO.o ./drivers/src/stm32f411ceu6_GPIO.su ./drivers/src/stm32f411ceu6_generic.cyclo ./drivers/src/stm32f411ceu6_generic.d ./drivers/src/stm32f411ceu6_generic.o ./drivers/src/stm32f411ceu6_generic.su
+	-$(RM) ./drivers/src/stm32f411ceu6_GPIO.cyclo ./drivers/src/stm32f411ceu6_GPIO.d ./drivers/src/stm32f411ceu6_GPIO.o ./drivers/src/stm32f411ceu6_GPIO.su ./drivers/src/stm32f411ceu6_I2C.cyclo ./drivers/src/stm32f411ceu6_I2C.d ./drivers/src/stm32f411ceu6_I2C.o ./drivers/src/stm32f411ceu6_I2C.su ./drivers/src/stm32f411ceu6_generic.cyclo ./drivers/src/stm32f411ceu6_generic.d ./drivers/src/stm32f411ceu6_generic.o ./drivers/src/stm32f411ceu6_generic.su
 
 .PHONY: clean-drivers-2f-src
 
